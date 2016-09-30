@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package droprate;
+
+/**
+ *
+ * @author Alex
+ */
+import java.util.Random;
+import java.util.Scanner;
+public class DropRate {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random ran = new Random();
+        
+        int chanceDrop = ran.nextInt(101);
+        int taxaDrop;
+        int drop;
+        
+        System.out.println("Digite a chance de drop: ");
+        taxaDrop = sc.nextInt();
+        
+        drop = chanceDrop + taxaDrop;
+        
+        if (drop >= 100){
+            System.out.println("Dropou porra!");
+        }
+        else if (drop != 100){
+        System.out.println("Dropou Porra nenhuma!");
+    }
+    }
+    
+}
